@@ -26,10 +26,10 @@ s = ''
 while s != '1' and s != '2' and s != 'q':
     s = input("1 - Технический словарь, 2 - Повседневный словарь, q - Выход\n")
     if s == '1':
-        filename = "Технический Словарь.txt"
+        filename = "..\\..\\Технический Словарь.txt"
     else:
         if s == '2':
-            filename = "Повседневный Словарь.txt"
+            filename = "..\\..\\Повседневный Словарь.txt"
         else:
             if s == 'q':
                 print("До свидания!")
@@ -90,10 +90,10 @@ while True:
     elif char == 'c':
         if s == 1:
             s = 2
-            filename = "Повседневный Словарь.txt"
+            filename = "..\\..\\Повседневный Словарь.txt"
         else:
             s = 1
-            filename = "Технический Словарь.txt"
+            filename = "..\\..\\Технический Словарь.txt"
         with open(filename, encoding='utf-8', newline="\n") as file:
             lines = file.readlines()
             card_dict.clear()
@@ -110,7 +110,7 @@ while True:
         print(rand_key)
     elif char == 'o':  # done!
         out_list = card_dict.items()
-        with open('w'+filename, 'w', encoding='utf-8', newline="\r\n") as file:
+        with open(filename, 'w', encoding='utf-8', newline="\r\n") as file:
             for item in out_list:
                 first = item[0] + '\n'
                 second = item[1]+'\n'
